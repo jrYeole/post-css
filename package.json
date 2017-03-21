@@ -1,0 +1,29 @@
+{
+  "name": "post-css",
+  "version": "1.0.0",
+  "description": "a tool for transforming styles with JS plugins",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prajktyeole/post-css.git"
+  },
+  "keywords": [
+    "postcss",
+    "html",
+    "js",
+    "css",
+    "plugins",
+    "scss",
+    "mixins",
+    "variables"
+  ],
+  "author": "Prajkt Yeole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prajktyeole/post-css/issues"
+  },
+  "homepage": "https://github.com/prajktyeole/post-css#readme"
+}
