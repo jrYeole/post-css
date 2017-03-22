@@ -3,7 +3,15 @@
 }
 
 .cssnext {
-    color: color (red alpha(-10%));
+    background: color(red alpha(-10%));
+}
+
+.bar {
+    color: gray(10%, 50%);
+}
+
+.cssnext {
+    color: color(red alpha(-10%));
 }
 
 .foo {
