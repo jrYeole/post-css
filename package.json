@@ -36,6 +36,7 @@
     "precss": "^1.4.0"
   },
   "dependencies": {
+    "gulp-rename": "^1.2.2",
     "postcss-cssnext": "^2.10.0",
     "postcss-reporter": "^3.0.0"
   }

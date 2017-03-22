@@ -15,6 +15,7 @@
 }
 
 $bg-red: #000;
+
 .precss {
-    background-color: $bg-red;
+background-color: $bg-red;
 }
