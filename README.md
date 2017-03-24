@@ -1,2 +1,3 @@
-<img width="95" height="95" title="Philosopher’s stone, logo of PostCSS" src="http://postcss.github.io/postcss/logo.svg"> #![](https://avatars1.githubusercontent.com/u/8237355?v=2&s=50) post-css
+#post-css
 trying out post css 
+<img align="right" width="95" height="95" title="Philosopher’s stone, logo of PostCSS" src="http://postcss.github.io/postcss/logo.svg">
