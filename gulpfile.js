@@ -6,15 +6,26 @@ var rename = require("gulp-rename");
 var atImport = require("postcss-import");
 var cssnano = require('gulp-cssnano');
 var rucksack = require('rucksack-css');
+var browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
     var processors = [cssnext, precss, atImport, cssnano, rucksack];
     return gulp.src('src/pcss/*.pcss')
         .pipe(postcss(processors))
         .pipe(rename("template.css"))
-        .pipe(gulp.dest('dist/css/'));
+        .pipe(gulp.dest('src/css/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
+gulp.task('browserSync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "src/"
+        }
+    });
+});
 gulp.task('minify', function() {
     return gulp.src('dist/css/*.css')
         .pipe(rename("template.min.css"))
@@ -27,4 +38,15 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('dist/'))
 });
 
-gulp.task('default', ['css', 'minify', 'copy']);
+//development task
+gulp.task('serve', ['browserSync', 'css'], function() {
+    gulp.watch('src/pcss/*.pcss', ['css']);
+    gulp.watch('src/*.html', browserSync.reload);
+});
+
+//final dist task
+//Todo
+//clean
+//fonts copy
+//img optimize 
+//css compress and js
